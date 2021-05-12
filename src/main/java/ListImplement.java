@@ -30,15 +30,15 @@ public class ListImplement {
             switch (choice) {
                 case 1:
                     System.out.println("Find");
-                    findValue();
+                    findValueInput();
                     break;
                 case 2:
                     System.out.println("Add");
-                    addValue();
+                    addValueInput();
                     break;
                 case 3:
                     System.out.println("Remove");
-                    removeValue();
+                    removeValueInput();
                     break;
                 case 4:
                     System.out.println("Back");
@@ -48,29 +48,41 @@ public class ListImplement {
         } while (cont);
     }
 
-    public void addValue() {
+
+    public void addValueInput() {
         System.out.println("Type the value that you want to add");
         Scanner keyb = new Scanner(System.in);
         String addValue = keyb.next();
-
-        listExample.add(addValue);
-
+        addValue(addValue);
     }
 
-    public void removeValue() {
-        System.out.println("Type the value you want to get rid of");
-        Scanner keyb = new Scanner(System.in);
-        String removeValue = keyb.next();
+    public void addValue(String addValue) {
+
+            listExample.add(addValue);
+
+    }
+        public void removeValueInput(){
+            System.out.println("Type the value you want to get rid of");
+            Scanner keyb = new Scanner(System.in);
+            String removeValue = keyb.next();
+            removeValue(removeValue);
+
+        }
+    public void removeValue(String removeValue) {
+
         listExample.remove(removeValue);
 
     }
-
-    public void findValue() {
+    public void findValueInput() {
         System.out.println("Type the keyof the value you want to find");
         Scanner keyb = new Scanner(System.in);
         String findValue = keyb.next();
-        System.out.println(listExample.indexOf(findValue));
+        findValue(findValue);
+    }
 
+    public int findValue(String findValue) {
+        System.out.println(listExample.indexOf(findValue));
+        return listExample.indexOf(findValue);
     }
 }
 

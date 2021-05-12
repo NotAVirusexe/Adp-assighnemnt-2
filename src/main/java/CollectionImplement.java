@@ -10,6 +10,7 @@ public class CollectionImplement {
         CollectionExample.add("Evee");
         CollectionExample.add("Butch");
     }
+
     public void ui() {
 
         boolean cont = true;
@@ -63,10 +64,14 @@ public class CollectionImplement {
 
     }
 
-//    public void findValue() {
-//        System.out.println("Type the keyof the value you want to find");
-//        Scanner keyb = new Scanner(System.in);
-//        String key = keyb.next();
-//        String keyVal = CollectionExample.get(key);
-//        System.out.println(keyV
+    public void findValueInput() {
+        System.out.println("Type the value of the item you want to find");
+        Scanner keyb = new Scanner(System.in);
+        String findValue = keyb.next();
+        findValue(findValue);
+    }
+
+    public void findValue(String findValue) {
+
+    }
 }

@@ -33,15 +33,15 @@ public class SetImplement {
             switch (choice) {
                 case 1:
                     System.out.println("Find");
-                    findValue();
+                    findValueInput();
                     break;
                 case 2:
                     System.out.println("Add");
-                    addValue();
+                    addValueInput();
                     break;
                 case 3:
                     System.out.println("Remove");
-                    removeValue();
+                    removeValueInput();
                     break;
                 case 4:
                     System.out.println("Back");
@@ -51,29 +51,49 @@ public class SetImplement {
         } while (cont);
     }
 
-    public void addValue() {
+    public void addValueInput(){
         System.out.println("Type the value that you want to add");
         Scanner keyb = new Scanner(System.in);
         String addValue = keyb.next();
-        
+        addValue(addValue);
+
+    }
+
+    public void addValue(String addValue) {
+
         setExample.add(addValue);
 
     }
-
-    public void removeValue() {
+    public void removeValueInput(){
         System.out.println("Type the value you want to get rid of");
         Scanner keyb = new Scanner(System.in);
         String removeValue = keyb.next();
+        removeValue(removeValue);
+
+    }
+    public void removeValue(String removeValue) {
+
         setExample.remove(removeValue);
 
     }
-
-    public void findValue() {
+    public void findValueInput(){
         System.out.println("Type the keyof the value you want to find");
         Scanner keyb = new Scanner(System.in);
         String findValue = keyb.next();
+        findValue(findValue);
 
-        System.out.println(findValue);
+    }
+    public String findValue(String findValue) {
+        String foundValue="Not found";
+       for (String i :setExample){
+           if(i.equals(findValue)){
+               foundValue=i;
+
+           }
+       }
+
+        System.out.println(foundValue);
+       return foundValue;
     }
 }
 
