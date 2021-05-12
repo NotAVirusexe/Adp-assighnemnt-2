@@ -17,8 +17,17 @@ public class main {
         switch (choice){
             case 1:
                 System.out.println("Collection");
+
+                System.out.println("Collection");
+                CollectionImplement collection =new CollectionImplement();
+                collection.populate();
+                collection.ui();
             case 2:
                 System.out.println("List");
+                ListImplement list =new ListImplement();
+                list.populate();
+                list.ui();
+
             case 3:
                 System.out.println("Map");
                 MapImplement map =new MapImplement();
@@ -26,7 +35,9 @@ public class main {
                 map.ui();
             case 4:
                 System.out.println("Set");
-
+                SetImplement set =new SetImplement();
+                set.populate();
+                set.ui();
 
         }
 

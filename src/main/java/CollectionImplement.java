@@ -30,7 +30,7 @@ public class CollectionImplement {
             switch (choice) {
                 case 1:
                     System.out.println("Find");
-//                    findValue();
+                    findValueInput();
                     break;
                 case 2:
                     System.out.println("Add");
