@@ -42,7 +42,6 @@ public class CollectionImplement {
                     break;
                 case 4:
                     System.out.println("Back");
-
                     cont = false;
             }
         } while (cont);
