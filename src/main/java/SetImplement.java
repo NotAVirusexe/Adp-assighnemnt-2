@@ -27,25 +27,22 @@ public class SetImplement implements Set{
             System.out.println("Type in the number you want");
 
             int choice = input.nextInt();
-
+            System.out.println("----------------------------------");
 
             switch (choice) {
                 case 1:
-                    System.out.println("Find");
                     findValueInput();
                     break;
                 case 2:
-                    System.out.println("Add");
                     addValueInput();
                     break;
                 case 3:
-                    System.out.println("Remove");
                     removeValueInput();
                     break;
                 case 4:
-                    System.out.println("Back");
-
                     cont = false;
+                default:
+                    System.out.println("Error 404");
             }
         } while (cont);
     }
@@ -55,6 +52,8 @@ public class SetImplement implements Set{
         Scanner keyb = new Scanner(System.in);
         String addValue = keyb.next();
         addValue(addValue);
+        System.out.println("the value has bein added");
+        System.out.println("----------------------------------");
 
     }
 
@@ -68,6 +67,8 @@ public class SetImplement implements Set{
         Scanner keyb = new Scanner(System.in);
         String removeValue = keyb.next();
         removeValue(removeValue);
+        System.out.println("the value has bein removed");
+        System.out.println("----------------------------------");
 
     }
     public void removeValue(String removeValue) {
@@ -80,6 +81,7 @@ public class SetImplement implements Set{
         Scanner keyb = new Scanner(System.in);
         String findValue = keyb.next();
         findValue(findValue);
+        System.out.println("----------------------------------");
 
     }
     public String findValue(String findValue) {

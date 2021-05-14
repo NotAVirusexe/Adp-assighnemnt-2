@@ -25,35 +25,38 @@ public class CollectionImplement implements Collection{
             System.out.println("3:Remove Value");
             System.out.println("4:back");
             System.out.println("Type in the number you want");
-
+            System.out.println("----------------------------------");
             int choice = input.nextInt();
 
 
             switch (choice) {
                 case 1:
-                    System.out.println("Find");
                     findValueInput();
                     break;
                 case 2:
-                    System.out.println("Add");
                     addValueInput();
                     break;
                 case 3:
-                    System.out.println("Remove");
-                    removeValueInput();
+                   removeValueInput();
                     break;
                 case 4:
-                    System.out.println("Back");
-                    cont = false;
+                   cont = false;
+                default:{
+                    System.out.println("Error 404");
+
+                }
             }
         } while (cont);
     }
+
 
     public void addValueInput() {
         System.out.println("Type the value that you want to add");
         Scanner keyb = new Scanner(System.in);
         String addValue = keyb.next();
         addValue(addValue);
+        System.out.println("value has bein added to the Collection");
+        System.out.println("----------------------------------");
     }
 
     public String addValue(String value) {
@@ -67,6 +70,8 @@ public class CollectionImplement implements Collection{
         Scanner keyb = new Scanner(System.in);
         String removeValue = keyb.next();
         removeValue(removeValue);
+        System.out.println("Value has bein removed from the collection");
+        System.out.println("----------------------------------");
 
     }
 
@@ -84,6 +89,8 @@ public class CollectionImplement implements Collection{
         Scanner keyb = new Scanner(System.in);
         String findValue = keyb.next();
         findValue(findValue);
+        System.out.println("----------------------------------");
+
     }
 
     public Boolean findValue(String findValue) {

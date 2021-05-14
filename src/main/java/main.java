@@ -4,6 +4,7 @@ import java.util.Scanner;
 
 public class main {
     public static void gui(){
+
         Scanner input = new Scanner(System.in);
         System.out.println("What option do you want to see");
         System.out.println("1:Collection");
@@ -13,9 +14,10 @@ public class main {
         System.out.println("Type in the number you want");
 
         int choice = input.nextInt();
-
+        System.out.println("----------------------------------");
         switch (choice){
             case 1:
+
                 System.out.println("Collection");
 
 
@@ -42,6 +44,8 @@ public class main {
                 set.populate();
                 set.ui();
                 break;
+            default:
+                System.out.print("You have chosen the wrong item\b");
 
         }
 

@@ -23,6 +23,7 @@ public class ListImplement implements List{
             System.out.println("3:Remove Value");
             System.out.println("4:back");
             System.out.println("Type in the number you want");
+            System.out.println("----------------------------------");
 
             int choice = input.nextInt();
 
@@ -44,16 +45,22 @@ public class ListImplement implements List{
                     System.out.println("Back");
 
                     cont = false;
+                default:
+                    System.out.println("Error 404");
             }
         } while (cont);
     }
 
 
     public void addValueInput() {
+
         System.out.println("Type the value that you want to add");
         Scanner keyb = new Scanner(System.in);
         String addValue = keyb.next();
         addValue(addValue);
+        System.out.println("Value has bein added");
+        System.out.println("----------------------------------");
+
     }
 
     public void addValue(String addValue) {
@@ -66,6 +73,9 @@ public class ListImplement implements List{
             Scanner keyb = new Scanner(System.in);
             String removeValue = keyb.next();
             removeValue(removeValue);
+            System.out.println("Value has bein removed");
+            System.out.println("----------------------------------");
+
 
         }
     public void removeValue(String removeValue) {
@@ -78,10 +88,12 @@ public class ListImplement implements List{
         Scanner keyb = new Scanner(System.in);
         String findValue = keyb.next();
         findValue(findValue);
+
     }
 
     public int findValue(String findValue) {
-        System.out.println(listExample.indexOf(findValue));
+        System.out.println("Index of trhe value is "+listExample.indexOf(findValue));
+        System.out.println("----------------------------------");
         return listExample.indexOf(findValue);
     }
 

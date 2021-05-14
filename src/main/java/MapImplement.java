@@ -27,25 +27,22 @@ public class MapImplement implements Map{
             System.out.println("Type in the number you want");
 
             int choice = input.nextInt();
-
+            System.out.println("----------------------------------");
 
             switch (choice) {
                 case 1:
-                    System.out.println("Find");
-                     findValueInput();
+                   findValueInput();
                     break;
                 case 2:
-                    System.out.println("Add");
                     addValueInput();
                     break;
                 case 3:
-                    System.out.println("Remove");
-                    removeValueInput();
+                   removeValueInput();
                     break;
                 case 4:
-                    System.out.println("Back");
-
                     cont = false;
+                default:
+                    System.out.println("Error 404");
             }
         } while (cont);
     }
@@ -55,9 +52,9 @@ public class MapImplement implements Map{
         String key = keyb.next();
         System.out.println("Type in the name Value");
         String value = keyb.next();
-
-
         addValue(key,value);
+        System.out.println("Value has bein added");
+        System.out.println("----------------------------------");
     }
 
     public void addValue(String key,String value) {
@@ -65,10 +62,12 @@ public class MapImplement implements Map{
 
     }
     public void removeValueInput(){
-        System.out.println("Type the keyof the value you want to get rid of");
+        System.out.println("Type the key of the value you want to get rid of");
         Scanner keyb = new Scanner(System.in);
         String key = keyb.next();
         removeValue(key);
+        System.out.println("Value has bein removed");
+        System.out.println("----------------------------------");
 
     }
     public void removeValue(String key) {
@@ -81,13 +80,13 @@ public class MapImplement implements Map{
         Scanner keyb = new Scanner(System.in);
         String key = keyb.next();
         findValue(key);
-
+        System.out.println("----------------------------------");
     }
 
     public String findValue(String key) {
 
         String keyVal = mapExample.get(key);
-        System.out.println(keyVal);
+        System.out.println("The value is"+keyVal);
         return keyVal;
     }
 
