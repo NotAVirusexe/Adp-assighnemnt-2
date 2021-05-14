@@ -39,7 +39,7 @@ class ListImplementTest {
 
         String value="ItemTest1";
         setTestO.addValue(value);
-        setTestO.findValue(value);
+
         String foundValue = setTestO.findValue(value);
 
         assertEquals(value,foundValue);

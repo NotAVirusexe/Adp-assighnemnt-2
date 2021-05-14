@@ -18,7 +18,7 @@ public class main {
             case 1:
                 System.out.println("Collection");
 
-                System.out.println("Collection");
+
                 CollectionImplement collection =new CollectionImplement();
                 collection.populate();
                 collection.ui();

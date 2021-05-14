@@ -1,9 +1,8 @@
-import java.util.HashMap;
-import java.util.HashSet;
-import java.util.Scanner;
-import java.util.Set;
+import org.jetbrains.annotations.NotNull;
 
-public class SetImplement {
+import java.util.*;
+
+public class SetImplement implements Set{
 
     Set<String> setExample = new HashSet<>(); 
     
@@ -94,6 +93,74 @@ public class SetImplement {
 
         System.out.println(foundValue);
        return foundValue;
+    }
+
+    @Override
+    public int size() {
+        return 0;
+    }
+
+    @Override
+    public boolean isEmpty() {
+        return false;
+    }
+
+    @Override
+    public boolean contains(Object o) {
+        return false;
+    }
+
+    @NotNull
+    @Override
+    public Iterator iterator() {
+        return null;
+    }
+
+    @NotNull
+    @Override
+    public Object[] toArray() {
+        return new Object[0];
+    }
+
+    @Override
+    public boolean add(Object o) {
+        return false;
+    }
+
+    @Override
+    public boolean remove(Object o) {
+        return false;
+    }
+
+    @Override
+    public boolean addAll(@NotNull Collection c) {
+        return false;
+    }
+
+    @Override
+    public void clear() {
+
+    }
+
+    @Override
+    public boolean removeAll(@NotNull Collection c) {
+        return false;
+    }
+
+    @Override
+    public boolean retainAll(@NotNull Collection c) {
+        return false;
+    }
+
+    @Override
+    public boolean containsAll(@NotNull Collection c) {
+        return false;
+    }
+
+    @NotNull
+    @Override
+    public Object[] toArray(@NotNull Object[] a) {
+        return new Object[0];
     }
 }
 

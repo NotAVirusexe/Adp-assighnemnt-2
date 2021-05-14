@@ -1,6 +1,8 @@
+import org.jetbrains.annotations.NotNull;
+
 import java.util.*;
 
-public class CollectionImplement {
+public class CollectionImplement implements Collection{
 
     Collection<String> CollectionExample = new ArrayList<>();
 
@@ -84,8 +86,86 @@ public class CollectionImplement {
         findValue(findValue);
     }
 
-    public String findValue(String findValue) {
-        return findValue;
+    public Boolean findValue(String findValue) {
+       Boolean check = CollectionExample.contains(findValue);
+       if (check){
+           System.out.println("Value has bein found");
+           }
+       else{
+           System.out.println("Value Not Found");
 
+       }
+
+       return check;
+
+    }
+
+
+    @Override
+    public int size() {
+        return 0;
+    }
+
+    @Override
+    public boolean isEmpty() {
+        return false;
+    }
+
+    @Override
+    public boolean contains(Object o) {
+        return false;
+    }
+
+    @NotNull
+    @Override
+    public Iterator iterator() {
+        return null;
+    }
+
+    @NotNull
+    @Override
+    public Object[] toArray() {
+        return new Object[0];
+    }
+
+    @Override
+    public boolean add(Object o) {
+        return false;
+    }
+
+    @Override
+    public boolean remove(Object o) {
+        return false;
+    }
+
+    @Override
+    public boolean addAll(@NotNull Collection c) {
+        return false;
+    }
+
+    @Override
+    public void clear() {
+
+    }
+
+    @Override
+    public boolean retainAll(@NotNull Collection c) {
+        return false;
+    }
+
+    @Override
+    public boolean removeAll(@NotNull Collection c) {
+        return false;
+    }
+
+    @Override
+    public boolean containsAll(@NotNull Collection c) {
+        return false;
+    }
+
+    @NotNull
+    @Override
+    public Object[] toArray(@NotNull Object[] a) {
+        return new Object[0];
     }
 }
