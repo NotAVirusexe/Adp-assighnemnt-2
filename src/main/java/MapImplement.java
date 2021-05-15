@@ -41,6 +41,7 @@ public class MapImplement implements Map{
                     break;
                 case 4:
                     cont = false;
+                    break;
                 default:
                     System.out.println("Error 404");
             }

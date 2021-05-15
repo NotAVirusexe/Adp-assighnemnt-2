@@ -45,6 +45,7 @@ public class ListImplement implements List{
                     System.out.println("Back");
 
                     cont = false;
+                    break;
                 default:
                     System.out.println("Error 404");
             }

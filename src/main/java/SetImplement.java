@@ -41,6 +41,7 @@ public class SetImplement implements Set{
                     break;
                 case 4:
                     cont = false;
+                    break;
                 default:
                     System.out.println("Error 404");
             }
@@ -89,12 +90,13 @@ public class SetImplement implements Set{
        for (String i :setExample){
            if(i.equals(findValue)){
                foundValue=i;
-
+               System.out.println(i);
+           }
+           else {
+               System.out.println("Value not found");
            }
        }
-
-        System.out.println(foundValue);
-       return foundValue;
+        return foundValue;
     }
 
     @Override

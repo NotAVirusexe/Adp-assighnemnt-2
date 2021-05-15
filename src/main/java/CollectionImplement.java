@@ -41,6 +41,7 @@ public class CollectionImplement implements Collection{
                     break;
                 case 4:
                    cont = false;
+                   break;
                 default:{
                     System.out.println("Error 404");
 
